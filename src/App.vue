@@ -1,28 +1,23 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div id="linkk">
+        <TopBar/>
+        <BlogsNav/>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+    import TopBar from './components/TopBar.vue'
+    import BlogsNav from './components/BlogsNav.vue';
+    export default {
+        name: 'App',
+        components:{TopBar,BlogsNav}
+    }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+    #linkk{
+        width: 1200px;
+        height: auto;
+        margin: 0 auto;
+    }
 </style>
