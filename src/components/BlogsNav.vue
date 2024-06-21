@@ -102,6 +102,7 @@
         padding: 4px;
         background-color: rgba(255, 255, 255, 0.6);
         border-radius: 10px;
+        margin-bottom: 100px;
     }
     ul{
         padding: 1px;

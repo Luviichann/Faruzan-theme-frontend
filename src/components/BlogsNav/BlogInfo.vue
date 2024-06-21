@@ -47,7 +47,7 @@
             showImage(){
                 this.timer = setTimeout(()=> {
                     this.showBigImage = true
-                },600)
+                },500)
             },
             hideImage(){
                 clearTimeout(this.timer)

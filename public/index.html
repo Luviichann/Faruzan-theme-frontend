@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <!-- <link rel="stylesheet" href="<%= BASE_URL %>bootstrap.css"> -->
+    <link rel="stylesheet" href="<%= BASE_URL %>reset.css">
+    <link rel="stylesheet" href="<%= BASE_URL %>index.css">
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
@@ -13,5 +16,22 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <!-- <script>
+// 监听按键事件
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I')) {
+        window.location.href = 'about:blank'; // 或者执行其他操作，如关闭页面
+    }
+});
+
+// 监听窗口大小变化
+window.addEventListener('resize', function() {
+    if (window.outerWidth - window.innerWidth > 100 || window.outerHeight - window.innerHeight > 100) {
+        window.location.href = 'about:blank'; // 或者执行其他操作，如关闭页面
+    }
+});
+
+
+    </script> -->
   </body>
 </html>

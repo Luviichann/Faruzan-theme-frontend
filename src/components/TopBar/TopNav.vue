@@ -1,12 +1,13 @@
 <template>
     <ul class="leftfix clearfix top-nav">
-        <li><a href="javascript:;"><div class="svg"><HomeSvg/></div><span>首页</span></a></li>
+        <li><router-link to="/index"><div class="svg"><HomeSvg/></div><span>首页</span></router-link></li>
         <li><a href="javascript:;"><div class="svg"><CategorySvg/></div><span>分类</span></a></li>
         <li><a href="javascript:;"><div class="svg"><BlogSvg/></div><span>博客</span></a></li>
         <!-- <li><a href="javascript:;"><span>留言板</span></a></li> -->
         <li><a href="javascript:;"><div class="svg"><CollectSvg/></div><span>收藏</span></a></li>
         <li><a href="javascript:;"><div class="svg"><SubscribeSvg/></div><span>订阅</span></a></li>
         <li><a href="javascript:;"><div class="svg"><JoinSvg/></div><span>申请加入</span></a></li>
+        <li><a href="javascript:;"><div class="svg"><MessageSvg/></div><span>留言板</span></a></li>
     </ul>
 </template>
 
@@ -17,13 +18,17 @@
     import CollectSvg from '../svg/CollectSvg.vue';
     import SubscribeSvg from '../svg/SubscribeSvg.vue';
     import JoinSvg from '../svg/JoinSvg.vue';
+    import MessageSvg from '../svg/MessageSvg.vue';
     export default {
         name:'TopNav',
-        components:{HomeSvg,CategorySvg,BlogSvg,CollectSvg,SubscribeSvg,JoinSvg}
+        components:{HomeSvg,CategorySvg,BlogSvg,CollectSvg,SubscribeSvg,JoinSvg,MessageSvg}
     }
 </script>
 
 <style scroped>
+    .top-nav{
+        background-color: #00000088;
+    }
     .top-nav li{
         float: left;
         font-size: 20px;

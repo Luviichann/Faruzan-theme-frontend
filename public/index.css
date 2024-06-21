@@ -1,0 +1,10 @@
+body{
+    /* background-image: url(http://localhost:8888/imgre/2.jpg);
+    background-attachment: fixed;
+    background-size: cover; */
+    background-color: rgba(137, 207, 235,0.5);
+    cursor: url("./fls3232.cur"),default;
+}
+a {
+    cursor: url("./rrmz.cur"),pointer;
+}
