@@ -1,10 +1,29 @@
 body{
-    /* background-image: url(http://localhost:8888/imgre/2.jpg);
+    /* background-image: url(http://localhost:8820/static/image/2.jpg);
     background-attachment: fixed;
     background-size: cover; */
     background-color: rgba(137, 207, 235,0.5);
-    cursor: url("./fls3232.cur"),default;
+    cursor: url("./faluuj.png"),default;
 }
-a {
-    cursor: url("./rrmz.cur"),pointer;
+a,
+.pointer,
+button {
+    cursor: url("./rrmz.png"),pointer;
 }
+img.blur{
+    /* opacity: 0;
+    filter: blur(5px);
+    transition: opacity 0.8s ease-out, filter 0.8s ease-out; */
+    filter: blur(20px);
+    transition: filter 0.7s ease-out;
+}
+
+img.lazyloaded {
+    opacity: 1;
+    filter: blur(0);
+}
+
+.special-pointer{
+    cursor: url("./faluuj.png"),default;
+}
+
