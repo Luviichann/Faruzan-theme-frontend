@@ -8,5 +8,8 @@ Vue.use(VueRouter)
 
 new Vue({
   render: h => h(App),
+  beforeCreate() {
+    Vue.prototype.$bus = this
+  },
   router:router
 }).$mount('#app')

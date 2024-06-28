@@ -22,7 +22,8 @@
     .container{
         width: 1186px;
         margin: 0 auto;
-        margin-top: 40px;
+        /* margin-top: 40px; */
+        padding-top: 40px;
         /* background-color: rgb(123,218,184,0.55); */
         /* background-color: rgb(217,236,240); */
         /* background-color: rgb(93,135,233,0.7); */

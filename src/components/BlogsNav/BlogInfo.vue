@@ -1,9 +1,9 @@
 <template>
-    <li>
+    <li @click="navigateTo(blog.url)" class="pointer">
         <div class="blog">
             <div class="blog-content clearfix">
                 <div class="leftfix">
-                    <img :src="blog.avatar" alt="" class="avatar">
+                    <img :data-src="blog.avatar" alt="" class="avatar lazyload blur">
                 </div>
                 <div class="blog-info leftfix">
                     <h4>{{blog.title}}</h4>
@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="small-web">
-                <img :src="blog.webpct" alt="" class="small-web" @mouseenter="showImage()" @mouseleave="hideImage()">
+                <img :data-src="blog.webpct" alt="" class="small-web lazyload blur" @mouseenter="showImage()" @mouseleave="hideImage()">
                 <transition name="fade">
                     <img class="big-img" :src="blog.webpct" alt="" v-if="showBigImage">
                 </transition>
@@ -37,8 +37,8 @@
         },
         computed: {
             truncatedText() {
-            if (this.blog.text.length > 22) {
-                return this.blog.text.slice(0, 22) + '......';
+            if (this.blog.text.length > 20) {
+                return this.blog.text.slice(0, 20) + '......';
             }
                 return this.blog.text;
             }
@@ -52,6 +52,10 @@
             hideImage(){
                 clearTimeout(this.timer)
                 this.showBigImage = false
+            },
+            navigateTo(url) {
+                // window.location.href = url;
+                window.open(url,'_blank')
             }
         },
     }
@@ -89,7 +93,7 @@
     }
     li{
         /* cursor: pointer; */
-        float: left;
+        /* float: left; */
         margin: 8px;
         padding: 8px;
         /* background-color: rgb(135, 206, 235,0.3); */
@@ -107,7 +111,7 @@
     .full-text {
         width: 194px;
         position: absolute;
-        background-color: rgb(0,0,0,0.6);
+        background-color: rgba(0,0,0,0.6);
         color: #ffffff;
         padding: 5px;
         /* transition: opacity 0.5s ease-in-out; */
@@ -128,5 +132,6 @@
         margin-left: -158px;
         margin-top: 10px;
         border-radius: 10px;
+        z-index: 1;
     }
 </style>

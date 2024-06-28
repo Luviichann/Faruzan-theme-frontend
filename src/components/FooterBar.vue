@@ -2,6 +2,12 @@
     <div class="footer">
         <div class="container">
             <FooterLine/>
+            <div class="footer-info">
+                <div><span>导航&nbsp;</span>|<span>基于Vue</span></div>
+                <div><span>站长：luvii</span></div>
+                <div><router-link to="/admin">后院</router-link></div>
+                <div><a href="https://beian.miit.gov.cn/" target="_blank" >冀ICP备2024056657号</a></div>
+            </div>
         </div>
     </div>
 </template>
@@ -16,6 +22,22 @@
 
 <style scoped>
     .footer{
-        margin-top: 400px;
+        margin-top: 200px;
+    }
+    .container{
+        margin: 20px auto;
+    }
+    .footer-info{
+        width: 480px;
+        line-height: 24px;
+        padding: 10px;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #ffffffaa;
+        border-radius: 10px;
+        color: rgb(128, 171, 168);
+    }
+    .footer-info a{
+        color: rgb(128, 171, 168);
     }
 </style>
