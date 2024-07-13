@@ -1,5 +1,5 @@
 <template>
-    <div class="logo leftfix">fls导航</div>
+    <div class="logo leftfix">fls书签栏</div>
 </template>
 
 <script>
