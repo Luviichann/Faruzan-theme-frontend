@@ -8,6 +8,9 @@
     <!-- <link rel="stylesheet" href="<%= BASE_URL %>bootstrap.css"> -->
     <link rel="stylesheet" href="<%= BASE_URL %>reset.css">
     <link rel="stylesheet" href="<%= BASE_URL %>index.css">
+
+    <link rel="stylesheet" type="text/css" href="<%= BASE_URL %>assets/waifu.css"/>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
@@ -15,6 +18,24 @@
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div id="app"></div>
+    <!-- <h2><a href="https://www.fghrsh.net/post/123.html" style="color: #38A3DB">Live2D 看板娘 v1.2</a> / Demo</h2> -->
+    
+    <div class="waifu">
+        <div class="waifu-tips"></div>
+        <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+        <div class="waifu-tool">
+            <span class="fui-home"></span>
+            <span class="fui-chat"></span>
+            <span class="fui-eye"></span>
+            <span class="fui-user"></span>
+            <span class="fui-photo"></span>
+            <span class="fui-info-circle"></span>
+            <span class="fui-cross"></span>
+        </div>
+    </div>
+    <script src="<%= BASE_URL %>assets/waifu-tips.js"></script>
+    <script src="<%= BASE_URL %>assets/live2d.js"></script>
+    <script type="text/javascript">initModel("assets/")</script>
     <!-- built files will be auto injected -->
     <!-- <script>
 // 监听按键事件
