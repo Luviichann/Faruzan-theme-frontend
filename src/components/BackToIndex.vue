@@ -31,6 +31,9 @@
 </script>
 
 <style scoped>
+    .container{
+        margin: 0 auto;
+    }
     .message-board{
         width: 900px;
         margin: 0 auto;

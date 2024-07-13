@@ -3,9 +3,9 @@
         <div class="container">
             <FooterLine/>
             <div class="footer-info">
-                <div><span>导航&nbsp;</span>|<span>基于Vue</span></div>
-                <div><span>站长：luvii</span></div>
-                <div><router-link to="/admin">后院</router-link></div>
+                <div><span>导航&nbsp;|&nbsp;基于Vue</span></div>
+                <div><span>站长：luvii&nbsp;|&nbsp;@Copyright luvii</span></div>
+                <div><router-link to="/admin/login">后院</router-link></div>
                 <div><a href="https://beian.miit.gov.cn/" target="_blank" >冀ICP备2024056657号</a></div>
             </div>
         </div>
@@ -30,6 +30,7 @@
     .footer-info{
         width: 480px;
         line-height: 24px;
+        font-size: 14px;
         padding: 10px;
         margin: 0 auto;
         text-align: center;

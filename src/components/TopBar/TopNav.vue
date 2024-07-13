@@ -1,22 +1,24 @@
 <template>
-    <ul class="leftfix clearfix top-nav">
-        <li><router-link to="/index"><div class="svg"><HomeSvg/></div><span>首页</span></router-link></li>
-        <li><a href="javascript:;"><div class="svg"><CategorySvg/></div><span>分类</span></a></li>
-        <li><a href="https://luviichann.top" target="_blank"><div class="svg"><BlogSvg/></div><span>博客</span></a></li>
-        <!-- <li><a href="javascript:;"><span>留言板</span></a></li> -->
-        <li @mouseenter="showCollect()" @mouseleave="hideCollect()"><a href="javascript:;"><div class="svg"><CollectSvg/></div><span>收藏</span></a></li>
-        <transition name="fade">
-            <div class="collect" v-if="showCollectDiv">
-                <p>
-                    按下"Ctrl+D"<br>可收藏本站。
-                </p>
-            </div>
-        </transition>
-        <li><router-link to="/subscribeto"><div class="svg"><SubscribeSvg/></div><span>订阅</span></router-link></li>
-        <li><a href="javascript:;"><div class="svg"><JoinSvg/></div><span>申请加入</span></a></li>
-        <li><a href="javascript:;"><div class="svg"><AboutSvg/></div><span>关于</span></a></li>
-        <li><router-link to="/messageboard"><div class="svg"><MessageSvg/></div><span>留言板</span></router-link></li>
-    </ul>
+    <div class="top-nav-container clearfix">
+        <ul class="leftfix clearfix top-nav">
+            <li><router-link to="/index"><div class="svg"><HomeSvg/></div><span>首页</span></router-link></li>
+            <li><a href="javascript:;"><div class="svg"><CategorySvg/></div><span>分类</span></a></li>
+            <li><a href="https://luviichann.top" target="_blank"><div class="svg"><BlogSvg/></div><span>博客</span></a></li>
+            <!-- <li><a href="javascript:;"><span>留言板</span></a></li> -->
+            <li @mouseenter="showCollect()" @mouseleave="hideCollect()"><a href="javascript:;"><div class="svg"><CollectSvg/></div><span>收藏</span></a></li>
+            <transition name="fade">
+                <div class="collect" v-if="showCollectDiv">
+                    <p>
+                        按下"Ctrl+D"<br>可收藏本站。
+                    </p>
+                </div>
+            </transition>
+            <li><router-link to="/subscribeto"><div class="svg"><SubscribeSvg/></div><span>订阅</span></router-link></li>
+            <li><router-link to="/joinus"><div class="svg"><JoinSvg/></div><span>加入</span></router-link></li>
+            <li><a href="javascript:;"><div class="svg"><AboutSvg/></div><span>关于</span></a></li>
+            <li><router-link to="/messageboard"><div class="svg"><MessageSvg/></div><span>留言板</span></router-link></li>
+        </ul>
+    </div>
 </template>
 
 <script>
@@ -50,8 +52,10 @@
 </script>
 
 <style scroped>
-    .top-nav{
+    .top-nav-container{
         background-color: #00000088;
+        padding: 4px;
+        border-radius: 6px;
     }
     .top-nav li{
         float: left;

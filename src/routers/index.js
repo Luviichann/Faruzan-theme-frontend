@@ -8,6 +8,7 @@ import Guide from '../Guide'
 import Admin from '../Admin'
 import AdminLogin from '../components/AdminLogin'
 import RealAdmin from '../components/RealAdmin'
+import JoinUs from '../components/JoinUs'
 
 export default new VueRouter({
     routes:[
@@ -49,6 +50,10 @@ export default new VueRouter({
                     path:'subscribeto',
                     component:SubscribeTo
                 },
+                {
+                    path:'joinus',
+                    component:JoinUs
+                }
             ]
         },
         

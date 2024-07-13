@@ -7,32 +7,27 @@
                 <li><span>简介：</span><input type="text" v-model="intro"></li>
                 <li><span>链接：</span><input type="text" v-model="url"></li>
                 <li><span>头像：</span><input type="text" v-model="avatar"></li>
+                <li><span>分类：</span><input type="text" v-model="category"></li>
             </ul>
-            <div class="sub">
-                <button @click="getWebp">获取网站图片</button>
-                <button>提交</button>
-            </div>
+            <UploadImage :title="title" :text="intro" :url="url" :avatar="avatar" :category="category" />
         </div>
     </div>
 </template>
 
 <script>
+    import UploadImage from './UploadImage.vue';
     export default {
         name:'AdminBlogs',
+        components:{UploadImage},
         data() {
             return {
                 title:'',
                 intro:'',
                 url:'',
-                avatar:''
+                avatar:'',
+                category:''
             }
         },
-        methods:{
-            async getWebp(){
-                    
-                
-            }
-        }
     }
 </script>
 
@@ -49,15 +44,5 @@
     }
     .info-list li{
         margin: 10px;
-    }
-    .sub button{
-        margin: 10px;
-        border: none;
-        width: 100px;
-        border-radius: 4px;
-        background-color: antiquewhite;
-    }
-    button:hover{
-        background-color: aquamarine;
     }
 </style>
