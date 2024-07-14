@@ -3,7 +3,7 @@
         <div class="container">
             <FooterLine/>
             <div class="footer-info">
-                <div><span>导航&nbsp;|&nbsp;基于Vue</span></div>
+                <div><span>Faruzan-Bookmark&nbsp;|&nbsp;基于Vue</span></div>
                 <div><span>站长：luvii&nbsp;|&nbsp;@Copyright luvii</span></div>
                 <div><router-link to="/admin/login">后院</router-link></div>
                 <div><a href="https://beian.miit.gov.cn/" target="_blank" >冀ICP备2024056657号</a></div>
