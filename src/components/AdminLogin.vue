@@ -89,7 +89,7 @@
     button:hover{
         background: rgb(85,199,166);
     }
-    /* input.hidden{
+    input.hidden{
         opacity: 0;
-    } */
+    }
 </style>
