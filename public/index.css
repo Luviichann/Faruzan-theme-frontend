@@ -1,7 +1,7 @@
 body{
-    /* background-image: url(http://localhost:8820/static/image/2.jpg);
+    background-image: url(./image/1314723.png);
     background-attachment: fixed;
-    background-size: cover; */
+    background-size: cover;
     background-color: rgba(137, 207, 235,0.5);
     cursor: url("./faluuj.png"),default;
 }
