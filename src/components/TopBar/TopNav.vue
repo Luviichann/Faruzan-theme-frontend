@@ -62,7 +62,7 @@
         font-size: 20px;
         margin: 0 14px;
         text-align: center;
-        line-height: 100%;
+        line-height: 54px;
         height: 26px;
     }
     .top-nav li a{
