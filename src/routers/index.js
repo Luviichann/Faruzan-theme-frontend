@@ -10,11 +10,15 @@ import AdminLogin from '../components/AdminLogin'
 import RealAdmin from '../components/RealAdmin'
 import JoinUs from '../components/JoinUs'
 
-export default new VueRouter({
+const router = new VueRouter({
+    mode:'history',
     routes:[
         {
             path:'',
             component:Guide,
+            meta: {
+                title: 'Faruzan-Bookmark'
+            }
         },
         {
             path:'/admin',
@@ -22,11 +26,17 @@ export default new VueRouter({
             children:[
                 {
                     path:'login',
-                    component:AdminLogin
+                    component:AdminLogin,
+                    meta: {
+                        title: 'Faruzan-Bookmark-认证身份'
+                    }
                 },
                 {
                     path:'',
-                    component:RealAdmin
+                    component:RealAdmin,
+                    meta: {
+                        title: 'Faruzan-Bookmark-管理'
+                    }
                 }
             ]
         },
@@ -36,23 +46,38 @@ export default new VueRouter({
             children:[
                 {
                     path:'index',
-                    component:BlogsNav
+                    component:BlogsNav,
+                    meta: {
+                        title: 'Faruzan-Bookmark-首页'
+                    }
                 },
                 {
                     path:'messageboard',
-                    component:MessageBoard
+                    component:MessageBoard,
+                    meta: {
+                        title: 'Faruzan-Bookmark-留言板'
+                    }
                 },
                 {
                     path:'backtoindex',
-                    component:BackToIndex
+                    component:BackToIndex,
+                    meta: {
+                        title: 'Faruzan-Bookmark'
+                    }
                 },
                 {
                     path:'subscribeto',
-                    component:SubscribeTo
+                    component:SubscribeTo,
+                    meta: {
+                        title: 'Faruzan-Bookmark-订阅'
+                    }
                 },
                 {
                     path:'joinus',
-                    component:JoinUs
+                    component:JoinUs,
+                    meta: {
+                        title: 'Faruzan-Bookmark-加入'
+                    }
                 }
             ]
         },
@@ -63,3 +88,12 @@ const originalPush = VueRouter.prototype.push
 VueRouter.prototype.push = function push(location) {
     return originalPush.call(this, location).catch(err => err)
 }
+
+router.beforeEach((to, from, next) => {
+    if (to.meta.title) {
+      document.title = to.meta.title
+    }
+    next()
+})
+
+export default router
