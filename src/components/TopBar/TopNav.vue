@@ -15,7 +15,7 @@
             </transition>
             <li><router-link to="/subscribeto"><div class="svg"><SubscribeSvg/></div><span>订阅</span></router-link></li>
             <li><router-link to="/joinus"><div class="svg"><JoinSvg/></div><span>加入</span></router-link></li>
-            <li><a href="javascript:;"><div class="svg"><AboutSvg/></div><span>关于</span></a></li>
+            <li><a href="https://github.com/Luviichann/Faruzan-theme-frontend" target="_blank"><div class="svg"><AboutSvg/></div><span>关于</span></a></li>
             <li><router-link to="/messageboard"><div class="svg"><MessageSvg/></div><span>留言板</span></router-link></li>
         </ul>
     </div>
