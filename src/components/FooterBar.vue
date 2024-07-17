@@ -5,7 +5,10 @@
             <div class="footer-info">
                 <div><span>Faruzan-Bookmark&nbsp;|&nbsp;基于Vue</span></div>
                 <div><span>站长：luvii&nbsp;|&nbsp;@Copyright luvii</span></div>
-                <div><router-link to="/admin/login">后院</router-link></div>
+                <div>
+                    <router-link to="/admin/login">后院 |</router-link>
+                    <a href="https://github.com/Luviichann/Faruzan-theme-frontend" target="_blank" > Github</a>
+                </div>
                 <div><a href="https://beian.miit.gov.cn/" target="_blank" >冀ICP备2024056657号</a></div>
             </div>
         </div>
