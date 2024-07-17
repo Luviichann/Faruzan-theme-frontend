@@ -50,7 +50,7 @@
 }
 .waifu-tool span {
     display: block;
-    cursor: pointer;
+    /* cursor: pointer; */
     color: #5b6c7d;
     line-height: 20px;
     transition: 0.2s;
