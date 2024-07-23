@@ -23,9 +23,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="code">
-            <span>验证码</span><input type="text">
-        </div> -->
     </div>
 </template>
 
@@ -61,7 +58,7 @@
                 this.$refs.warning1.style.opacity = 0
                 this.buttonAble = false //获取邮箱验证码不能再点
                 e.target.classList.remove('pointer') //鼠标小手变成指针
-                let timeNum = 2 //获取邮箱验证码冷却时间
+                let timeNum = 60 //获取邮箱验证码冷却时间
                 e.target.innerHTML = timeNum //倒计时
                 let timeId = setInterval(()=>{
                     timeNum --
@@ -75,14 +72,14 @@
                     e.target.innerHTML = timeNum
                 },1000)
                 // 调用后端发送邮件api
-                // axios.post(`${API_HOST}/msgBoard/sendEmail`,{
-                //     email:this.subEmail,
-                //     type:'SubscribeTo',
-                //     key:"lava"
-                // }).then()
-                // .catch(error => {
-                //     console.error('Error posting data:', error);
-                // });
+                axios.post(`${API_HOST}/msgBoard/sendEmail`,{
+                    email:this.subEmail,
+                    type:'SubscribeTo',
+                    key:"lava"
+                }).then()
+                .catch(error => {
+                    console.error('Error posting data:', error);
+                });
             },
             async validEmailCode(){
                 await axios.post(`${API_HOST}/msgBoard/validEmailCode`,{

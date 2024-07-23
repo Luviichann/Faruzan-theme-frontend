@@ -22,8 +22,7 @@ export default{
   },
   methods: {
       randomBase(len){
-        //   const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
-          const chars = 'ab';
+        const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
         let result = '';
         for (let i = 0; i < len; i++) {
             const randomIndex = Math.floor(Math.random() * chars.length);
@@ -45,7 +44,7 @@ export default{
     },
  
     drawPic () {
-      this.identifyCode = this.randomBase(2)
+      this.identifyCode = this.randomBase(6)
       this.updateRealCode(this.identifyCode)
       let canvas = document.getElementById('s-canvas')
       let ctx = canvas.getContext('2d')

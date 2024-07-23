@@ -89,7 +89,7 @@
                 this.$refs.warning2.style.display = 'none'
                 this.buttonAble = false //获取邮箱验证码不能再点
                 e.target.classList.remove('pointer') //鼠标小手变成指针
-                let timeNum = 1 //获取邮箱验证码冷却时间
+                let timeNum = 60 //获取邮箱验证码冷却时间
                 e.target.innerHTML = timeNum //倒计时
                 let timeId = setInterval(()=>{
                     timeNum --
